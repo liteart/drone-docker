@@ -34,7 +34,5 @@ Vagrant.configure(2) do |config|
     end
     cached_addresses[vm.name]
   end
-  config.vm.provision "shell", inline: "wget --user=liteart --password=q2j6t9BR7zJUn4fwYJpf -O - https://api.bitbucket.org/1.0/repositories/bertschiagch/vagrant_base/raw/master/vagrant_config_provision.sh | bash"
-  config.vm.provision "shell", inline: "wget --user=liteart --password=q2j6t9BR7zJUn4fwYJpf -O - https://api.bitbucket.org/1.0/repositories/bertschiagch/vagrant_base/raw/master/vagrant_config_always.sh | bash", run: "always"
   config.vm.provision :hostmanager
 end
