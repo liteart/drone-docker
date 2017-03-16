@@ -1,4 +1,4 @@
 FROM plugins/docker
-COPY ./authinit.sh /
-CMD chmod 777 /authinit.sh
-ENTRYPOINT ["/authinit.sh", "/bin/drone-docker"]
+COPY ./authinit.sh /bin/
+RUN chmod 777 /bin/authinit.sh
+ENTRYPOINT ["/bin/authinit.sh", "/bin/drone-docker"]
