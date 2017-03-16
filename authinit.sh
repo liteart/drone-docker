@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -e
 
 if [ -n "$PRIVATE_REPO_PULL_USER" -a -n "$PRIVATE_REPO_PULL_PASSWORD" -a -n "$PRIVATE_REPO_PULL_ADDRESS" ]; then
